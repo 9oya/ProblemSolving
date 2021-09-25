@@ -39,6 +39,7 @@
 		BF9375D926FEB20D0023A716 /* 완주하지못한선수_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "완주하지못한선수_1.swift"; sourceTree = "<group>"; };
 		BF9375DB26FECD360023A716 /* 전화번호목록_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "전화번호목록_2.swift"; sourceTree = "<group>"; };
 		BF9375DD26FEE65F0023A716 /* 위장_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "위장_2.swift"; sourceTree = "<group>"; };
+		BF9375E026FEE7F10023A716 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BFEBDADD26F6FEB600149368 /* ProblemSolving */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProblemSolving; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEBDAE026F6FEB600149368 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		BFEBDAE726F7056500149368 /* K번째수_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "K번째수_1.swift"; sourceTree = "<group>"; };
@@ -75,6 +76,18 @@
 			path = Hash;
 			sourceTree = "<group>";
 		};
+		BF9375DF26FEE7D60023A716 /* Programmers */ = {
+			isa = PBXGroup;
+			children = (
+				BF9375E026FEE7F10023A716 /* README.md */,
+				BF9375D826FEB2050023A716 /* Hash */,
+				BF9375D326FD6DFA0023A716 /* Heap */,
+				BFEBDAEA26F7159500149368 /* Greedy */,
+				BFEBDAE926F7056800149368 /* Sort */,
+			);
+			path = Programmers;
+			sourceTree = "<group>";
+		};
 		BFEBDAD426F6FEB600149368 = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +107,7 @@
 		BFEBDADF26F6FEB600149368 /* ProblemSolving */ = {
 			isa = PBXGroup;
 			children = (
-				BF9375D826FEB2050023A716 /* Hash */,
-				BF9375D326FD6DFA0023A716 /* Heap */,
-				BFEBDAEA26F7159500149368 /* Greedy */,
-				BFEBDAE926F7056800149368 /* Sort */,
+				BF9375DF26FEE7D60023A716 /* Programmers */,
 				BFEBDAE026F6FEB600149368 /* main.swift */,
 			);
 			path = ProblemSolving;
