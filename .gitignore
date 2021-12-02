@@ -22,6 +22,7 @@ DerivedData
 .swiftpm/
 docs/docsets
 *.xcframework
+/ProblemSolving.xcodeproj/xcuserdata
 
 timeline.xctimeline
 .vscode
@@ -62,4 +63,3 @@ Packages/
 
 .idea
 
-/SSPagerExample/Pods
