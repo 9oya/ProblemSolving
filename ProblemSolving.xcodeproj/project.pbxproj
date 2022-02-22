@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF22866027C4A1E800027960 /* 모의고사_L1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22865F27C4A1E800027960 /* 모의고사_L1.swift */; };
 		BF9375D026F970FB0023A716 /* 조이스틱_L2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9375CF26F970FB0023A716 /* 조이스틱_L2.swift */; };
 		BF9375D226FAFD830023A716 /* 큰수만들기_L2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9375D126FAFD830023A716 /* 큰수만들기_L2.swift */; };
 		BF9375D526FD6E100023A716 /* 더맵게_L2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9375D426FD6E100023A716 /* 더맵게_L2.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BF22865F27C4A1E800027960 /* 모의고사_L1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "모의고사_L1.swift"; sourceTree = "<group>"; };
 		BF9375CF26F970FB0023A716 /* 조이스틱_L2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "조이스틱_L2.swift"; sourceTree = "<group>"; };
 		BF9375D126FAFD830023A716 /* 큰수만들기_L2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "큰수만들기_L2.swift"; sourceTree = "<group>"; };
 		BF9375D426FD6E100023A716 /* 더맵게_L2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "더맵게_L2.swift"; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF22865E27C4A1C300027960 /* BruteForce */ = {
+			isa = PBXGroup;
+			children = (
+				BF22865F27C4A1E800027960 /* 모의고사_L1.swift */,
+			);
+			path = BruteForce;
+			sourceTree = "<group>";
+		};
 		BF9375D326FD6DFA0023A716 /* Heap */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 		BF9375DF26FEE7D60023A716 /* Programmers */ = {
 			isa = PBXGroup;
 			children = (
+				BF22865E27C4A1C300027960 /* BruteForce */,
 				F5F1C13A2720E0DC006F73E7 /* Stack_Queue */,
 				BF9375D826FEB2050023A716 /* Hash */,
 				BF9375D326FD6DFA0023A716 /* Heap */,
@@ -237,6 +248,7 @@
 				BF9375D026F970FB0023A716 /* 조이스틱_L2.swift in Sources */,
 				BFF65361272FA89E005218AC /* 숫자문자열과영단어_L1.swift in Sources */,
 				BF9375D726FE999A0023A716 /* 디스크컨트롤러_L3.swift in Sources */,
+				BF22866027C4A1E800027960 /* 모의고사_L1.swift in Sources */,
 				BF9375DA26FEB20D0023A716 /* 완주하지못한선수_L1.swift in Sources */,
 				BF9375DE26FEE65F0023A716 /* 위장_L2.swift in Sources */,
 				F5F1C13C2720E0EE006F73E7 /* 기능개발_L2.swift in Sources */,
