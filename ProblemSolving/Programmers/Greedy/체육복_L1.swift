@@ -61,28 +61,45 @@ class 체육복 {
         }
         return _result
     }
-}
+    
+    func solution2(_ n:Int, _ lost:[Int], _ reserve:[Int]) -> Int {
+        var suiteCnt: Int = 0
+        var _lost: [Int] = lost
+        var _reserve: [Int] = reserve
 
-func solution2(_ n:Int, _ lost:[Int], _ reserve:[Int]) -> Int {
-    var suiteCnt: Int = 0
-    var _lost: [Int] = lost
-    var _reserve: [Int] = reserve
-
-    for student in (1...n) {
-        if _lost.contains(student) {
-            // lost
-            if _reserve.contains(student) {
-                // reserve
-                _reserve = _reserve.filter { $0 !=  student }
-                _lost = _lost.filter { $0 != student }
-                suiteCnt += 1
-            } else {
-                // not reserve
-                if student > 1 {
-                    // not first idx
-                    if student < n {
-                        // not last idx
-                        if student-1 > 0 && student+1 <= n {
+        for student in (1...n) {
+            if _lost.contains(student) {
+                // lost
+                if _reserve.contains(student) {
+                    // reserve
+                    _reserve = _reserve.filter { $0 !=  student }
+                    _lost = _lost.filter { $0 != student }
+                    suiteCnt += 1
+                } else {
+                    // not reserve
+                    if student > 1 {
+                        // not first idx
+                        if student < n {
+                            // not last idx
+                            if student-1 > 0 && student+1 <= n {
+                                if _reserve.contains(student-1) && !_lost.contains(student-1) {
+                                    // brrow from front
+                                    _reserve = _reserve.filter { $0 !=  student-1 }
+                                    _lost = _lost.filter { $0 != student }
+                                    suiteCnt += 1
+                                    continue
+                                }
+                                
+                                if _reserve.contains(student+1) && !_lost.contains(student+1) {
+                                    // brrow from back
+                                    _reserve = _reserve.filter { $0 !=  student+1 }
+                                    _lost = _lost.filter { $0 != student }
+                                    suiteCnt += 1
+                                    continue
+                                }
+                            }
+                        } else {
+                            // last idx
                             if _reserve.contains(student-1) && !_lost.contains(student-1) {
                                 // brrow from front
                                 _reserve = _reserve.filter { $0 !=  student-1 }
@@ -90,41 +107,25 @@ func solution2(_ n:Int, _ lost:[Int], _ reserve:[Int]) -> Int {
                                 suiteCnt += 1
                                 continue
                             }
-                            
-                            if _reserve.contains(student+1) && !_lost.contains(student+1) {
-                                // brrow from back
-                                _reserve = _reserve.filter { $0 !=  student+1 }
-                                _lost = _lost.filter { $0 != student }
-                                suiteCnt += 1
-                                continue
-                            }
                         }
                     } else {
-                        // last idx
-                        if _reserve.contains(student-1) && !_lost.contains(student-1) {
-                            // brrow from front
-                            _reserve = _reserve.filter { $0 !=  student-1 }
+                        // first idx
+                        if _reserve.contains(student+1) && !_lost.contains(student+1) {
+                            // brrow from back
+                            _reserve = _reserve.filter { $0 !=  student+1 }
                             _lost = _lost.filter { $0 != student }
                             suiteCnt += 1
                             continue
                         }
                     }
-                } else {
-                    // first idx
-                    if _reserve.contains(student+1) && !_lost.contains(student+1) {
-                        // brrow from back
-                        _reserve = _reserve.filter { $0 !=  student+1 }
-                        _lost = _lost.filter { $0 != student }
-                        suiteCnt += 1
-                        continue
-                    }
                 }
+            } else {
+                // not lost
+                suiteCnt += 1
+                continue
             }
-        } else {
-            // not lost
-            suiteCnt += 1
-            continue
         }
+        return suiteCnt
     }
-    return suiteCnt
 }
+
